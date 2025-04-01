@@ -16,10 +16,14 @@ const choice = {
     name: "scissors",
     img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhSYYvy3_ZU5FYb8Jug1Gssh483SEIn8hSwWO33rp-7j9m5AFsn9Fyis9oT1DKvykpCEMV6bJGMAaTtABep-1qqr9ZPtiI_aQQsJVWNL6H_i-b6I3O_1-dgwmavPoEI9HHMsuHHPQCHj90/s270/janken_choki.png",
   },
+  default: {
+    name: "default",
+    img: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizQb-uhR2lvPNWzG-ubN3pK-qoEbb87nl8ZmmXnt6sY2OBcxRAh3racGtnnh5jsov2jzyvo2Dcpm9WyBC2cHZ_FYq_gsiKIRQ73VmGh-5bpyNVLvjD16p3qcfFXELDlWmekIm5fag0SKE/s500/janken_boys.png",
+  },
 };
 
 function App() {
-  const [userSelect, setUserSelect] = useState();
+  const [userSelect, setUserSelect] = useState(choice.default);
 
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]);
